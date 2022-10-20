@@ -1,5 +1,8 @@
 import React from "react";
+import Image from 'next/image'
 import styles from "../styles/Marathon.module.css";
+import archer1 from '../public/archer1.png';
+import archer2 from '../public/archer2.png';
 
 export default function Marathon() {
   return (
@@ -20,9 +23,9 @@ export default function Marathon() {
       </div>
       <h3 className={styles.aimtext}>MAQSAD</h3>
       <div className={styles.archeryAssets}>
-        <img className={styles.archerImage} src="/archer1.png" alt="archer master" />
+        <Image className={styles.archerImage} src={archer1} alt="master" />
         <span className={styles.archerTarget}>
-          <img className={styles.archerImage} src="/archer2.png" alt="archer target" />
+          <Image className={styles.archerImage} src={archer2} alt="target" />
           <p className={styles.timeInfo}>2000 soat</p>
         </span>
       </div>
