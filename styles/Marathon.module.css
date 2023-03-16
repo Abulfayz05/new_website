@@ -1,11 +1,7 @@
 .goal__box {
   padding: 35px 25px;
   border-radius: 10px;
-<<<<<<< HEAD
-  margin-top: 100px;
-=======
   margin-top: 130px;
->>>>>>> ff749108c90f061746fddb896c6169558fdd06e5
 
 }
 
@@ -65,6 +61,7 @@
   font-size: 25px;
   font-weight: 600;
   font-family: system-ui;
+  text-align: center;
 }
 .aimtext {
   text-align: center;

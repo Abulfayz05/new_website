@@ -5,6 +5,7 @@ import NextNProgress from "nextjs-progressbar";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
 import Seocontent from "./homeapi/static.json";
+import Gtag from "../component/Gtag";
 
 function MyApp({ Component, pageProps }) {
   const { locale } = useRouter();
@@ -18,17 +19,24 @@ function MyApp({ Component, pageProps }) {
             name="viewport"
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
           />
-          <meta name="google-site-verification" content="bFnjq-PIuIrpOIHmhgutTVLrhdHsCZTam66nqRCiE0k" />
+          <meta
+            name="google-site-verification"
+            content="bFnjq-PIuIrpOIHmhgutTVLrhdHsCZTam66nqRCiE0k"
+          />
           <link rel="icon" href="/faviconnew.svg" />
-    
         </Head>
 
         {Seocontent.seocontent
           .filter((p) => p.languages_code === locale)
           .map(({ title, desc }, i) => (
-            <NextSeo key={i}  title={title} description={desc} titleTemplate={title} />
+            <NextSeo
+              key={i}
+              title={title}
+              description={desc}
+              titleTemplate={title}
+            />
           ))}
-
+        <Gtag />
         <Component {...pageProps} />
       </Layout>
     </div>

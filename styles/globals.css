@@ -1,25 +1,25 @@
-@font-face {
+/* @font-face {
   font-family: "Objektiv";
   src: url(../public/Objektiv/ObjektivMk1-Regular.ttf);
   font-weight: 400;
-}
+} */
 
-@font-face {
+/* @font-face {
   font-family: "Objektiv";
   src: url(../public/Objektiv/ObjektivMk1-Bold.ttf);
   font-weight: 700;
-}
+} */
 
-@font-face {
+/* @font-face {
   font-family: "Objektiv";
   src: url(../public/Objektiv/ObjektivMk1-Black.ttf);
   font-weight: 800;
-}
+} */
 
 body {
   margin: 0;
   overflow-x: hidden;
-  font-family: "Objektiv";
+  font-family: "Arial Narrow Bold", sans-serif;
 }
 
 a {
@@ -35,6 +35,13 @@ a {
 
 .item.active {
   color: #8d53fd;
+}
+
+.xat {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container__fluid {
@@ -111,6 +118,10 @@ a {
 .accordion__section {
   display: flex;
   flex-direction: column;
+  border-left: 2px solid #00c5ff;
+  border-radius: 6px;
+  padding-left: 10px;
+  margin: 7px 0 7px;
 }
 
 /* Style the buttons that are used to open and close the accordion panel */
@@ -156,7 +167,8 @@ a {
     font-size: 12px;
   }
 
-  .accordion{ /** accordion open & close buttons **/
+  .accordion {
+    /** accordion open & close buttons **/
     width: 100%;
   }
 }
@@ -325,3 +337,112 @@ a {
     width: 600px !important;
   }
 }
+
+/************Register userlist style*************/
+.userlist {
+  margin-top: 100px;
+}
+
+table {
+  --accent-color: #362f4b;
+  --text-color: slategray;
+  --bgColorDarker: #ececec;
+  --bgColorLighter: #fcfcfc;
+  --insideBorderColor: lightgray;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--accent-color);
+  border-collapse: collapse;
+  color: var(--text-color);
+  table-layout: fixed;
+}
+
+table caption {
+  margin: 1rem 0;
+  color: slategray;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.055rem;
+  text-align: center;
+}
+
+table thead tr {
+  color: whitesmoke;
+  background-color: var(--accent-color);
+  font-size: 1rem;
+}
+
+table tbody tr {
+  border: 1px solid var(--insideBorderColor);
+  background-color: var(--bgColorDarker);
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: var(--bgColorLighter);
+}
+
+table th {
+  letter-spacing: 0.075rem;
+}
+
+table th,
+table td {
+  padding: 0.75rem 1rem;
+  font-weight: normal;
+  text-align: left;
+}
+
+table th:nth-child(4),
+table td:nth-child(4) {
+  text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  table {
+    border: none;
+  }
+
+  table caption {
+    padding: 0.75rem 1rem;
+    border-radius: 6px 6px 0 0;
+    color: whitesmoke;
+    font-size: 1.35rem;
+    background-color: var(--accent-color);
+  }
+
+  table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  table tbody tr {
+    margin-bottom: 2rem;
+    display: block;
+  }
+
+  table td {
+    font-size: 0.875rem;
+    text-align: right;
+    display: block;
+  }
+
+  table td:before {
+    content: attr(data-label);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.075rem;
+    text-transform: uppercase;
+    float: left;
+    opacity: 0.5;
+  }
+
+  table td:not(:last-child) {
+    border-bottom: 1px solid var(--insideBorderColor);
+  }
+}
+
+/************ END Register userlist style*************/

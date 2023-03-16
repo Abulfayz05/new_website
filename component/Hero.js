@@ -29,7 +29,7 @@ export default function Hero(props) {
                       alt="telegramicon"
                       quality={75}
                     />
-                    <a href="https://t.me/joinchat/P84ptL81sN8yNWRi">
+                    <a href="https://t.me/uzbekvoice">
                       {button2}
                     </a>
                   </div>
@@ -39,11 +39,12 @@ export default function Hero(props) {
           })}
       </div>
       <video
-        poster="./video-poster.jpg"
-        src="./video.mp4"
+        poster="/video-poster.jpg"
+        src="/Postervideo.mp4"
         controls
         muted
         loop
+      
     
         // autoPlay
       ></video>
