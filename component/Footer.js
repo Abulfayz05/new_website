@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import styles from '../styles/Footer.module.css'
 import FooterApi from '../pages/footerapi/static.json'
@@ -7,6 +7,10 @@ import Link from 'next/link'
 export default function Footer() {
   const router = useRouter()
   const { locale } = router;
+
+  // for automatic update year
+  const today = new Date();
+  const year = today.getFullYear();
 
   return (
 
@@ -79,7 +83,7 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <h3>{descr}</h3>
+            <h3>UzbekVoice.ai © {year} Barcha huquqlar himoyalangan.</h3>
           </div>
         </footer>
       )
